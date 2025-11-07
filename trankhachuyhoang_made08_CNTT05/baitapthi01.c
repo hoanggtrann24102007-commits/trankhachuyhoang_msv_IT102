@@ -1,4 +1,15 @@
 #include <stdio.h>
+
+
+int laSoNguyenTo(int n) {
+    if (n < 2) return 0;
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0)
+            return 0;
+    }
+    return 1;
+}
+
 int main() {
     int lua_chon;
     int n = 0;
@@ -125,6 +136,11 @@ int main() {
                     printf("Khong tim thay phan tu %d trong mang\n", x);
                 break;
             }
+
+            case 0:
+                printf("Thoat chuong trinh. Tam biet!\n");
+                break;
+
             default:
                 printf("Lua chon khong hop le, vui long nhap lai!\n");
         }
@@ -133,3 +149,5 @@ int main() {
 
     return 0;
 }
+
+
